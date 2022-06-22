@@ -1,3 +1,4 @@
+/* Basic styles start */
 :root {
     /* Typography */
     --primary-font-family: 'Overpass', sans-serif;
@@ -26,12 +27,15 @@ html {
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: var(--body-background-color);
 }
+/* Basic styles end */
 
+/* General styles start */
 .card-container {
     background: linear-gradient(to bottom, rgb(37,45,55), rgb(22, 28, 35));
     width: 262.5px;
@@ -41,10 +45,22 @@ body {
     border-radius: 20px;
 }
 
-.logo-container {
+.content__title {
+    font-size: 2.5rem;
+}
+
+.content__text {
+    font-size: 1.5rem;
+    color: var(--font-color);
+}
+/* General styles end */
+
+/* Rating screen styles start */
+.rating-card__logo {
     box-sizing: border-box;
     width: 4rem;
     height: 4rem;
+    margin-bottom: 15px;
     padding: 5px;
     background-color: rgb(41, 50, 60);
     border: none;
@@ -52,16 +68,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.content__title {
-    font-size: 2.5rem;
-    margin: 15px auto;
-}
-
-.content__text {
-    font-size: 1.5rem;
-    color: var(--font-color);
 }
 
 .ratings-container {
@@ -122,3 +128,30 @@ body {
     font-weight: var(--weight-bold);
     background-color: var(--primary-color);
 }
+/* Rating screen styles end */
+
+/* Thank you screen styles start */
+.thankyou-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 10px;
+}
+
+.selected-rating {
+    width: auto;
+    margin: 15px auto;
+    padding: 5px 10px;
+    background-color: rgb(41, 50, 60);
+    border: none;
+    border-radius: 20px;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.thankyou-card__content>h1 {
+    margin-bottom: 10px;
+}
+/* Thank you screen styles end */
